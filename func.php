@@ -70,7 +70,13 @@ class DataValidation {
         $len = strlen($ogrn);
 
         if( $len === 13){
-                         return $ogrn[12] = substr((substr($ogrn, 0, -1)%11), -1);  //Алгоритм для 13 значного ОГРН
+
+        	$n13 = (int) substr(bcsub(substr($ogrn, 0, -1), 				
+        																//Алгоритм для 13 значного ОГРН
+           	bcmul(bcdiv(substr($ogrn, 0, -1), '11', 0), '11')), -1);
+			
+			return ($n13 === (int) $ogrn{12});
+					
         	
         }elseif ( $len === 15 ){
                          return $ogrn[14] = substr(substr($ogrn, 0, -1)%13,-1);  //Алгоритм для 15 значного ОГРН
