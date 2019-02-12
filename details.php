@@ -1,5 +1,6 @@
 <?php
 require_once "func.php";
+require_once "db.php";
 
 $data = $_POST['fname'];
 

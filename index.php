@@ -5,6 +5,7 @@
 <script src="js/script.js"></script> <!--файл jquery и ajax-->
 </head>
 <body>
+    <h2>Проверка валидности введенных данных</h2>
     <table style="padding: 25px">
         <tr>
             <td>Введите:</td>
